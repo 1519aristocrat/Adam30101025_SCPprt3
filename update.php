@@ -52,7 +52,7 @@
                 // write a prepare statement to update data
                 $update = $connection->prepare("update scp set subject=?, class=?, containment=?, image=?, description=?  where id=?");
             
-                $update->bind_param("ssssss", $_POST['subject'], $_POST['image'], $_POST['class'], $_POST['containment'], $_POST['description'], $_POST['id']);
+                $update->bind_param("ssssss", $_POST['subject'], $_POST['class'], $_POST['containment'], $_POST['image'], $_POST['description'], $_POST['id']);
                 
                 if($update->execute())
                 {
